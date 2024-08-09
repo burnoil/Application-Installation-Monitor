@@ -1,0 +1,1 @@
+Small powershell application that runs and watches the registry for changes as applications are deployed to an endpoint. You can designate which applications you want it to watch for and it will change status from "Not Installed" to "Installed". See line 67 for list of apps you can add/subtract. Wildcards are accepted (*).
