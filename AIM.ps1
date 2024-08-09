@@ -1,4 +1,4 @@
-﻿# Load the required assemblies
+# Load the required assemblies
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
 
@@ -7,6 +7,7 @@ $form = New-Object System.Windows.Forms.Form
 $form.Text = "App Installation Monitor (AIM) 2.0"
 $form.Size = New-Object System.Drawing.Size(700, 540)
 $form.StartPosition = "CenterScreen"
+$form.TopMost = $true  # Make the form stay on top
 
 # Set a larger font for the form
 $formFont = New-Object System.Drawing.Font("Segoe UI", 14)
@@ -23,7 +24,7 @@ $form.Controls.Add($menu)
 # Add event handler for About menu item
 $aboutItem.Add_Click({
     [System.Windows.Forms.MessageBox]::Show(
-        "Application Installation Monitor (AIM)`nVersion number: 2.0`nWritten by: Todd Loenhorst`nGit page: https://github.com/burnoil", 
+        "Application Installation Monitor (AIM)`nVersion number: 2.0`nWritten by: burnoil`nGit page: https://github.com/burnoil", 
         "About AIM", 
         [System.Windows.Forms.MessageBoxButtons]::OK, 
         [System.Windows.Forms.MessageBoxIcon]::Information
